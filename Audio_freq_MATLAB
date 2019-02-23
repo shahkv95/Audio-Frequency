@@ -1,0 +1,49 @@
+Audio signals are usually composed of many different frequencies. 
+For example, in music, the note 'middle C' has a frequency of 261.6 Hz, and 
+most music consists of several notes (or frequencies) being played at the same time.
+
+Typically, the frequencies that make up a signal are different enough that they do not interfere substantially with each other.
+
+However, when a signal contains two frequencies that are close together, 
+they can cause the signal to appear to have a 'beat' - a pulsing pattern in the amplitude.
+
+
+fs - represents the sampling frequency of the audio signal.
+t - represents the times when the audio signal was sampled.
+y - represent the audio signal amplitude at each sampled time.
+Since the y vector contains the sum of two sine waves with similar frequencies, you will see a 'beat' pattern.
+Plot the y vector (y-axis) against the t vector (x-axis).
+A Fourier transform returns information about the frequency content of the signal. 
+So fft function is used to compute the discrete Fourier transform of a vector.
+numel function is used to return the number of elements in an array.
+The fft function in MATLAB uses only the sampled data to compute the Fourier transform. 
+The f variable will represent the frequencies that correspond to the values in yfft.
+The output values from fft are complex numbers. To plot their magnitude, the abs function is used.
+
+***********************************************************************************************************************************
+
+INPUT CODE:
+
+
+fs = 10
+t = 0:1/fs:20
+y = sin(1.8*2*pi*t) + sin(2.1*2*pi*t)
+plot(t,y)
+yfft = fft(y)
+n = numel(y)
+f = 0:fs/n:fs*(n-1)/n
+plot(f,abs(yfft))
+
+***********************************************************************************************************************************
+OUTPUT for each input command respectively
+***********************************************************************************************************************************
+
+
+CONCLUSION:
+
+Notice the two spikes on the left side of the plot which correspond to the frequencies of the two sine waves you created earlier. 
+Since the spikes are close together, the signal exhibits the beat phenomenon.
+
+Why are there four spikes? That relates to the Nyquist frequency, which in this case is 5 (or fs/2). 
+When the input vector consists of real numbers, the fft function always returns data whose magnitude is symmetric about the 
+Nyquist frequency. That is, the second half of the plot (after the Nyquist frequency) is just a mirror image of the first half.
