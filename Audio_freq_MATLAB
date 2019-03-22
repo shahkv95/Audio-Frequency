@@ -37,7 +37,6 @@ plot(f,abs(yfft))
 OUTPUT for each input command respectively
 ***********************************************************************************************************************************
 
-
 CONCLUSION:
 
 Notice the two spikes on the left side of the plot which correspond to the frequencies of the two sine waves you created earlier. 
