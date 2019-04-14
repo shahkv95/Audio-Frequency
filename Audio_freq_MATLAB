@@ -9,7 +9,9 @@ they can cause the signal to appear to have a 'beat' - a pulsing pattern in the 
 
 
 fs - represents the sampling frequency of the audio signal.
+
 t  - represents the times when the audio signal was sampled.
+
 y  - represent the audio signal amplitude at each sampled time.
 Since the y vector contains the sum of two sine waves with similar frequencies, you will see a 'beat' pattern.
 Plot the y vector (y-axis) against the t vector (x-axis).
