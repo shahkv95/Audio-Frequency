@@ -48,5 +48,3 @@ When the input vector consists of real numbers, the fft function always returns 
 Nyquist frequency. That is, the second half of the plot (after the Nyquist frequency) is just a mirror image of the first half.
 
 
-
-
