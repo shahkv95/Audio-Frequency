@@ -46,4 +46,3 @@ Since the spikes are close together, the signal exhibits the beat phenomenon.
 Why are there four spikes? That relates to the Nyquist frequency, which in this case is 5 (or fs/2). 
 When the input vector consists of real numbers, the fft function always returns data whose magnitude is symmetric about the 
 Nyquist frequency. That is, the second half of the plot (after the Nyquist frequency) is just a mirror image of the first half.
-
