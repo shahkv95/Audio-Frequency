@@ -22,6 +22,7 @@ The f variable will represent the frequencies that correspond to the values in y
 The output values from fft are complex numbers. To plot their magnitude, the abs function is used.
 
 
+
 ***********************************************************************************************************************************
 
 INPUT CODE:
