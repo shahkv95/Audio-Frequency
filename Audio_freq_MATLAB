@@ -28,6 +28,7 @@ The output values from fft are complex numbers. To plot their magnitude, the abs
 
 INPUT CODE:
 
+
 fs = 10
 t  = 0:1/fs:20
 y  = sin(1.8*2*pi*t) + sin(2.1*2*pi*t)
